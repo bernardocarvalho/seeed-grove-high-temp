@@ -1,18 +1,17 @@
+/* https://wiki.seeedstudio.com/Grove-High_Temperature_Sensor */
 #include <Arduino.h>
 
 #include "High_Temp.h"
- 
+
 HighTemp ht(A1, A0);
- 
-void setup()
-{
+
+void setup() {
     Serial.begin(115200);
     Serial.println("grove - hight temperature sensor test demo");
     ht.begin();
 }
- 
-void loop()
-{
+
+void loop() {
     Serial.println(ht.getThmc());
     delay(500);
 }
